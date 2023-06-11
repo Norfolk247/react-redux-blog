@@ -38,3 +38,9 @@
 .sorter:active {
     background-color: gray;
 }
+@media (max-width: 768px) {
+    .main {
+        width: 60%;
+    }
+
+}

@@ -20,6 +20,10 @@ function App() {
 
     return (
         <div>
+            <Routes>
+                {pages.map(({path,element})=><Route key={path} path={path} element={element}/>)}
+                <Route path='*' element={<Main/>}/>
+            </Routes>
             <header>
                 <Burger>
                     <div className='burgerHeader'>
@@ -31,10 +35,6 @@ function App() {
                     </div>
                 </Burger>
             </header>
-            <Routes>
-                {pages.map(({path,element})=><Route key={path} path={path} element={element}/>)}
-                <Route path='*' element={<Main/>}/>
-            </Routes>
         </div>
     );
 }

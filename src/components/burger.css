@@ -25,3 +25,8 @@
 svg {
     cursor: pointer;
 }
+@media (max-width: 425px) {
+    .burger-menu {
+        width: 50%;
+    }
+}

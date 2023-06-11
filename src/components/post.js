@@ -41,8 +41,8 @@ const Post = (props) => {
 
     return (
         <div className='post'>
-            <div className='post-header' onClick={()=>navigate(`/user/${userId}`)}>
-                <div className='post-header-avatar'>
+            <div className='post-header'>
+                <div className='post-header-avatar' onClick={()=>navigate(`/user/${userId}`)}>
                     {userAvatar()}
                 </div>
                 {title}
