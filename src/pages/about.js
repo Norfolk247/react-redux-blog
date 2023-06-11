@@ -1,10 +1,14 @@
+import './about.css'
 import React from 'react';
-import OffcanvasExample from "../components/offcanvas";
 
 const About = () => {
     return (
-        <div>
-            <OffcanvasExample/>
+        <div className='about'>
+            <h1>О себе</h1>
+            <div>
+                <p>Из технических навыков всё указано в резюме, профиль гитхаб: https://github.com/Norfolk247</p>
+                <p>Студент по специальности информационная безопасность</p>
+            </div>
         </div>
     );
 };

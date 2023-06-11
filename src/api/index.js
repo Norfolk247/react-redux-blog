@@ -26,9 +26,18 @@ export const getPostComments = async (id) => {
 export const getUser = async (id) => {
     try {
         const {data} = await instance.get(`users/${id}`)
-        return data ?? {}
+        return data ?? {error:'что-то пошло не так'}
     } catch (e) {
         console.log(e.message)
-        return {}
+        return {error:e.message}
+    }
+}
+export const getUserPosts = async (id) => {
+    try {
+        const {data} = await instance.get(`users/${id}/posts`)
+        return data ?? []
+    } catch (e) {
+        console.log(e.message)
+        return []
     }
 }

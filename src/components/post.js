@@ -9,10 +9,11 @@ const Post = (props) => {
     const {userId,title,body,id} = props.post
     const navigate = useNavigate()
     const useComments = () => {
-        const delay = () => new Promise(resolve => setTimeout(resolve,500))
         const [commentsActive, setCommentsActive] = useState(false)
         const [isLoading, setIsLoading] = useState(false)
         const [comments, setComments] = useState([])
+
+        const delay = () => new Promise(resolve => setTimeout(resolve,500))
         const onClickHandler = async () => {
             if (commentsActive) {
                 setCommentsActive(prevState => !prevState)
@@ -20,7 +21,7 @@ const Post = (props) => {
                 setCommentsActive(prevState => !prevState)
                 setIsLoading(true)
                 await delay()
-                setComments(await getPostComments(id).then(data=>data))
+                setComments(await getPostComments(id))
                 setIsLoading(false)
             }
         }
