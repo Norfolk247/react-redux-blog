@@ -1,0 +1,26 @@
+.post {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #212121;
+    margin: 10px 0;
+    border: 2px solid #7e7e7e;
+    color: white;
+}
+.post-header {
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px 0;
+}
+.post-header-avatar {
+    margin: 0 10px 0 0;
+    cursor: pointer;
+}
+.post-footer {
+    display: flex;
+    border-top: 1px solid white;
+    padding: 10px 0 0 0;
+    justify-content: center;
+    margin: 10px 0 0 0;
+    flex-direction: column;
+    align-items: center;
+}
